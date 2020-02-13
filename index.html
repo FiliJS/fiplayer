@@ -27,37 +27,37 @@
             </span>
           </div>
 
-          <video class="current-video" >
+          <video class="current-video" id="current-video">
             <source src="./assets/BigBuckBunny.mp4" />
           </video>
 
           <div class="controls">
             <div class="controls__player">
-              <button class="button button--prev">
+              <button class="button button--prev" id="btn-prev">
                 <svg aria-hidden="true" data-prefix="fas" data-icon="step-backward" class="svg-inline--fa fa-step-backward fa-w-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="18"><path fill="#FFF" d="M64 468V44c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v176.4l195.5-181C352.1 22.3 384 36.6 384 64v384c0 27.4-31.9 41.7-52.5 24.6L136 292.7V468c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12z"/></svg>
               </button>
-              <button class="button button--play" id="play-button"><svg width="16" aria-hidden="true" data-prefix="fas" data-icon="play" class="svg-inline--fa fa-play fa-w-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#FFF" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"/></svg></button>
-              <button class="button button--next"><svg width="18" aria-hidden="true" data-prefix="fas" data-icon="step-forward" class="svg-inline--fa fa-step-forward fa-w-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#FFF" d="M384 44v424c0 6.6-5.4 12-12 12h-48c-6.6 0-12-5.4-12-12V291.6l-195.5 181C95.9 489.7 64 475.4 64 448V64c0-27.4 31.9-41.7 52.5-24.6L312 219.3V44c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12z"/></svg></button>
+              <button class="button button--play" id="btn-play-pause"><svg width="16" aria-hidden="true" data-prefix="fas" data-icon="play" class="svg-inline--fa fa-play fa-w-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#FFF" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"/></svg></button>
+              <button class="button button--next" id="btn-next"><svg width="18" aria-hidden="true" data-prefix="fas" data-icon="step-forward" class="svg-inline--fa fa-step-forward fa-w-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#FFF" d="M384 44v424c0 6.6-5.4 12-12 12h-48c-6.6 0-12-5.4-12-12V291.6l-195.5 181C95.9 489.7 64 475.4 64 448V64c0-27.4 31.9-41.7 52.5-24.6L312 219.3V44c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12z"/></svg></button>
             </div>
 
             <div class="controls__time">
-              <span class="time__current">0:50</span>
+              <span class="time__current" id="current-time-text">0:50</span>
               <div class="time__progress-bar">
                 <div class="time__progress-bar__current"></div>
               </div>
-              <span class="time__rest">2:30</span>
+              <span class="time__rest" id="time-remaining-text">2:30</span>
             </div>
 
             <div class="controls__options">
-              <button class="button button--shuffle"><svg fill="#FFF" width="22" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><path d="M18.71 14.29a1 1 0 00-1.42 1.42l.29.29H16a4 4 0 010-8h1.59l-.3.29a1 1 0 000 1.42A1 1 0 0018 10a1 1 0 00.71-.29l2-2A1 1 0 0021 7a1 1 0 00-.29-.71l-2-2a1 1 0 00-1.42 1.42l.29.29H16a6 6 0 00-5 2.69A6 6 0 006 6H4a1 1 0 000 2h2a4 4 0 010 8H4a1 1 0 000 2h2a6 6 0 005-2.69A6 6 0 0016 18h1.59l-.3.29a1 1 0 000 1.42A1 1 0 0018 20a1 1 0 00.71-.29l2-2A1 1 0 0021 17a1 1 0 00-.29-.71z" data-name="shuffle-2"/></g></svg></button>
-              <button class="button button--repeat"><svg fill="#FFF" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="repeat"><path d="M17.91 5h-12l1.3-1.29a1 1 0 00-1.42-1.42l-3 3a1 1 0 000 1.42l3 3a1 1 0 001.42 0 1 1 0 000-1.42L5.91 7h12a1.56 1.56 0 011.59 1.53V11a1 1 0 002 0V8.53A3.56 3.56 0 0017.91 5zM18.21 14.29a1 1 0 00-1.42 1.42l1.3 1.29h-12a1.56 1.56 0 01-1.59-1.53V13a1 1 0 00-2 0v2.47A3.56 3.56 0 006.09 19h12l-1.3 1.29a1 1 0 000 1.42 1 1 0 001.42 0l3-3a1 1 0 000-1.42z"/></g></g></svg></button>
+              <button class="button button--shuffle" id="btn-suffle"><svg fill="#FFF" width="22" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><path d="M18.71 14.29a1 1 0 00-1.42 1.42l.29.29H16a4 4 0 010-8h1.59l-.3.29a1 1 0 000 1.42A1 1 0 0018 10a1 1 0 00.71-.29l2-2A1 1 0 0021 7a1 1 0 00-.29-.71l-2-2a1 1 0 00-1.42 1.42l.29.29H16a6 6 0 00-5 2.69A6 6 0 006 6H4a1 1 0 000 2h2a4 4 0 010 8H4a1 1 0 000 2h2a6 6 0 005-2.69A6 6 0 0016 18h1.59l-.3.29a1 1 0 000 1.42A1 1 0 0018 20a1 1 0 00.71-.29l2-2A1 1 0 0021 17a1 1 0 00-.29-.71z" data-name="shuffle-2"/></g></svg></button>
+              <button class="button button--repeat" id="btn-repeat"><svg fill="#FFF" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="repeat"><path d="M17.91 5h-12l1.3-1.29a1 1 0 00-1.42-1.42l-3 3a1 1 0 000 1.42l3 3a1 1 0 001.42 0 1 1 0 000-1.42L5.91 7h12a1.56 1.56 0 011.59 1.53V11a1 1 0 002 0V8.53A3.56 3.56 0 0017.91 5zM18.21 14.29a1 1 0 00-1.42 1.42l1.3 1.29h-12a1.56 1.56 0 01-1.59-1.53V13a1 1 0 00-2 0v2.47A3.56 3.56 0 006.09 19h12l-1.3 1.29a1 1 0 000 1.42 1 1 0 001.42 0l3-3a1 1 0 000-1.42z"/></g></g></svg></button>
 
-              <button class="button button--volume" id="unmute-button">
+              <button class="button button--volume" id="btn-mute-unmute">
                 <svg fill="#FFF" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="volume-up"><path d="M18.28 8.37a1 1 0 10-1.56 1.26 4 4 0 010 4.74A1 1 0 0017.5 16a1 1 0 00.78-.37 6 6 0 000-7.26z"/><path d="M19.64 5.23a1 1 0 10-1.28 1.54A6.8 6.8 0 0121 12a6.8 6.8 0 01-2.64 5.23 1 1 0 00-.13 1.41A1 1 0 0019 19a1 1 0 00.64-.23A8.75 8.75 0 0023 12a8.75 8.75 0 00-3.36-6.77zM14.47 3.12a1 1 0 00-1 0L7 7.57H2a1 1 0 00-1 1v6.86a1 1 0 001 1h5l6.41 4.4A1.06 1.06 0 0014 21a1 1 0 001-1V4a1 1 0 00-.53-.88z"/></g></g></svg>
               </button>
 
-              <button class="button button--pip"><svg fill="#FFF" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 34.3"><path d="M38.2 30.6V3.8H3.8v26.8h34.4zm3.8-.1c0 1-.4 1.9-1.2 2.7-.8.8-1.7 1.2-2.7 1.2H3.8c-1 0-1.9-.4-2.7-1.2S0 31.5 0 30.5V3.8c0-1 .4-1.9 1.2-2.6C1.9.4 2.8 0 3.8 0h34.3c1 0 1.9.4 2.7 1.1.8.8 1.2 1.6 1.2 2.7v26.7zm-7.7-15.2v11.4H19.1V15.3h15.2z"/></svg></button>
-              <button class="button button--fullscreen"><svg fill="#FFF" width="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M20.6 0H32v11.4h-4.5V4.5h-6.9V0zm6.9 27.5v-6.9H32V32H20.6v-4.5h6.9zM0 11.4V0h11.4v4.5H4.5v6.9H0zm4.5 9.2v6.9h6.9V32H0V20.6h4.5z"/></svg></button>
+              <button class="button button--pip" id="btn-pip"><svg fill="#FFF" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 34.3"><path d="M38.2 30.6V3.8H3.8v26.8h34.4zm3.8-.1c0 1-.4 1.9-1.2 2.7-.8.8-1.7 1.2-2.7 1.2H3.8c-1 0-1.9-.4-2.7-1.2S0 31.5 0 30.5V3.8c0-1 .4-1.9 1.2-2.6C1.9.4 2.8 0 3.8 0h34.3c1 0 1.9.4 2.7 1.1.8.8 1.2 1.6 1.2 2.7v26.7zm-7.7-15.2v11.4H19.1V15.3h15.2z"/></svg></button>
+              <button class="button button--fullscreen" id="btn-fullscreen"><svg fill="#FFF" width="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M20.6 0H32v11.4h-4.5V4.5h-6.9V0zm6.9 27.5v-6.9H32V32H20.6v-4.5h6.9zM0 11.4V0h11.4v4.5H4.5v6.9H0zm4.5 9.2v6.9h6.9V32H0V20.6h4.5z"/></svg></button>
             </div>
           </div>
         </div>
